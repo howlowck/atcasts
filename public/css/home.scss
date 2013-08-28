@@ -1,0 +1,21 @@
+@import 'default';
+.hero {
+    text-align: center;
+    .logo {
+        display: inline-block;
+        text-align: left;
+        width: 4.5em;
+        font-size: 35px;
+        position: relative;
+        color: rgba($blue, 0.7); 
+
+        // &:after {
+        //     content: 'AT Casts';
+        //     position:absolute; left: 0.07em; top: 0.1em;
+        //     color: rgba(255,0,0,0.5);
+        // }
+        // &:hover {
+        //     content: '';
+        // }
+    }
+}

@@ -11,10 +11,13 @@
 |
 */
 Route::get('/', function () {
-    return Redirect::to('/test')->with('message', 'Login Failed');
+    return View::make('home');
 });
+
 Route::get('/test', function()
 {
     $message = Session::get('message');
-	return View::make('hello', array('message'=>$message));
+	return View::make('home', array('message' => $message));
 });
+
+Route::resource('video', 'VideoController');

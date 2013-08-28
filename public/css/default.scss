@@ -1,0 +1,75 @@
+@import 'sass/_colors';
+@import 'sass/_inputs';
+@import 'sass/_fonts';
+@import '../assets/scss-mixins/all';
+body {
+    margin: 0;
+    background-color: lighten($lightgray, 10%);
+}
+.top-nav {
+    background-color: $green;
+    box-shadow: 0 4px 0 darken($green, 5%);
+    margin-bottom: 4px;
+    .inner {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        position: relative;
+        @include display(flex);
+        h1 {
+            text-shadow: 0px 1px 1px lighten($black, 30%);
+            color: $black;
+            padding: 0.35em;
+            display: inline-block;
+            margin: 0;
+            font-size: 1.2em;        }
+        ul {
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            li {
+                display: inline;
+                a, span {
+                    display: inline-block;
+                    padding: 10px 5px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: $black;
+                }
+                a:hover, a:focus {
+                    color: $lightyellow;
+                }
+                a:active {
+                    position:relative;
+                    box-shadow: 0 -4px 0 darken($green, 5%);
+                    background-color: $green;
+                    top: 4px;
+                }
+            }
+            &.user {
+                margin-left: auto;
+                //position: absolute;
+                //right: 0;
+            }
+        }
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    @include display(flex);
+    .main {
+        padding-left: 5px;
+        display: block;
+        @include flex(1);
+    }
+    .sidebar {
+        background-color: $lightyellow;
+        padding-left: 5px;
+        width: 30%;
+        overflow: auto;
+    }
+}
